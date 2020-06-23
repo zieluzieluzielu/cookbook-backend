@@ -39,7 +39,6 @@ public class IngredientServiceTest {
 
         //When
         List<Ingredient> allIngredients = ingredientService.getAllIngredients();
-
         //Then
         assertEquals(1, allIngredients.size());
 
@@ -82,7 +81,6 @@ public class IngredientServiceTest {
     }
 
 
-
     @Test
     public void saveIngredient() {
         //Given
@@ -109,7 +107,7 @@ public class IngredientServiceTest {
     }
 
     @Test
-    public void  ingredientToAnalyzeTest(){
+    public void ingredientToAnalyzeTest() {
         //Given
         Ingredient ingredient = new Ingredient(1L, new BigDecimal(100), "g", new Product(1L, "Chicken breast", new ProductGroup(6L, "Meat", new ArrayList<>()), new ArrayList<>()), new Recipe(), false);
         //When
