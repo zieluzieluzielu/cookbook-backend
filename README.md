@@ -44,9 +44,7 @@ Project is connected to locally built database (MYSQL)
 
 ## HOW TO RUN
 
-To have the full functionality - please import the dump of the database (MYSQL).
-
-App database is currently stored internally, to be downloaded here: http://www.test.com
+To have the full functionality - please import the dump of the database (MYSQL) - stored internally, to be downloaded here: https://github.com/zieluzieluzielu/cookbook-backend/blob/master/src/main/resources/db%20dumps/Dump20200622.sql
 
 To run this project in your IDE, you need to have Lombok plugin and enabled annotation processing.
 This project has a front-end instance:
