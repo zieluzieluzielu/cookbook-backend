@@ -13,7 +13,4 @@ public class RecipeCategoryDto {
     private Long recipeCategoryId;
     private String recipeCategoryName;
 
-    public RecipeCategoryDto(String recipeCategoryName) {
-        this.recipeCategoryName = recipeCategoryName;
-    }
 }

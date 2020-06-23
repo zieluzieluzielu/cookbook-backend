@@ -33,6 +33,7 @@ public class RecipeMapper {
 
     public RecipeDto mapToRecipeDto(final Recipe recipe) {
         return new RecipeDto(
+                recipe.getRecipeId(),
                 recipe.getRecipeName(),
                 recipe.getRecipeDetails(),
                 recipe.getPreparationTime(),

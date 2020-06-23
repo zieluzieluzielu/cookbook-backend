@@ -34,6 +34,7 @@ public class IngredientMapper {
 
     public IngredientDto mapToIngredientDto(final Ingredient ingredient) {
         return new IngredientDto(
+                ingredient.getIngredientPortionId(),
                 ingredient.getAmount(),
                 ingredient.getUnit(),
                 ingredient.getProduct().getProductId(),

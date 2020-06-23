@@ -32,6 +32,10 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     @Query(nativeQuery = true)
     List<Recipe> retrieveRecipesByProduct(@Param("PRODUCT_ID") long productId);
 
+    @Query(nativeQuery = true)
+    List<Recipe> retrieveRecipesByUser(@Param("USER_ID") long userId);
+
+
     @Override
     long count();
 

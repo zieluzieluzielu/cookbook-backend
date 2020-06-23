@@ -1,11 +1,7 @@
 package com.mzielinski.cookbook.domain.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Builder
 public class ProductDto {
@@ -13,7 +9,8 @@ public class ProductDto {
     private String productName;
     private Long groupId;
 
-    public ProductDto(String productName, Long groupId) {
+    public ProductDto(Long productId, String productName, Long groupId) {
+        this.productId = productId;
         this.productName = productName;
         this.groupId = groupId;
     }

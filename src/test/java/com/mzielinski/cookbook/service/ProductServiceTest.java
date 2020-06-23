@@ -45,6 +45,26 @@ public class ProductServiceTest {
     }
 
     @Test
+    public void getProductsByRecipe() {
+        List<Product> productList = new ArrayList<>();
+        Product product = new Product(1L, "Chicken breast", new ProductGroup(6L, "Meat", new ArrayList<>()), new ArrayList<>());
+        productList.add(product);
+
+        when(productRepository.retrieveProductsByRecipe(6L)).thenReturn(productList);
+
+        //When
+        List<Product> productsByRecipe= productService.getProductsByRecipe(6L);
+
+        //Then
+        assertEquals(1, productsByRecipe.size());
+        /*
+         public List<Product> getProductsByRecipe(Long recipeId) {
+        return productRepository.retrieveProductsByRecipe(recipeId);
+    }
+         */
+    }
+
+    @Test
     public void getProductsByProductGroup() {
         //Given
         List<Product> productList = new ArrayList<>();

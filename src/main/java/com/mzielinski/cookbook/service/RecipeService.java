@@ -42,6 +42,11 @@ public class RecipeService {
         return recipeRepository.retrieveRecipesByProduct(productId);
     }
 
+    public List<Recipe> getRecipesByUser(Long userId) {
+        return recipeRepository.retrieveRecipesByUser(userId);
+    }
+
+
 
     public Recipe saveRecipe(final Recipe recipe) {
         Recipe newRecipe = recipeRepository.save(recipe);

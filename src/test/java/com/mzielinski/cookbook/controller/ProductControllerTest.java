@@ -105,6 +105,40 @@ public class ProductControllerTest {
 
     }
 
+
+    @Test
+    public void shouldRetrieveProductsListByRecipe() throws Exception {
+        //Given
+        Recipe recipe1 = new Recipe(1L, "Chicken Burger", "Test recipe details", 30L, new RecipeCategory(), new User(), new ArrayList<>());
+
+        List<ProductDto> productsListDto = new ArrayList<>();
+        ProductDto productDto1 = ProductDto.builder()
+                .productId(1L)
+                .productName("Chicken")
+                .groupId(1L)
+                .build();
+
+        ProductDto productDto2 = ProductDto.builder()
+                .productId(2L)
+                .productName("Pork")
+                .groupId(1L)
+                .build();
+
+        productsListDto.add(productDto1);
+        productsListDto.add(productDto2);
+
+        when(productMapper.mapToProductsDtoList(productService.getProductsByRecipe(recipe1.getRecipeId()))).thenReturn(productsListDto);
+
+        //When & Then
+        mockMvc.perform(get("/v1/products/recipe/list/1").contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(2)))
+                .andExpect(jsonPath("$[0].productId", is(productsListDto.get(0).getProductId().intValue())))
+                .andExpect(jsonPath("$[1].productName", is("Pork")))
+                .andExpect(jsonPath("$[0].groupId", is(1)));
+    }
+
+
     @Test
     public void shouldRetrieveProductListByProductGroup() throws Exception {
         //Given

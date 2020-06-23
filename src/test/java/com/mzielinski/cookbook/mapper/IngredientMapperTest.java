@@ -31,7 +31,7 @@ public class IngredientMapperTest {
     @Test
     public void mapToIngredientTest() {
         //Given
-        IngredientDto ingredientDto = new IngredientDto(new BigDecimal(500), "g", 1L, 1L, true);
+        IngredientDto ingredientDto = new IngredientDto(1L,new BigDecimal(500), "g", 1L, 1L, true);
 
         Product product = new Product(1L, "name", new ProductGroup(), new ArrayList<>());
         Recipe recipe = new Recipe(1L, "Chicken Burger", "Test recipe details", 30L, new RecipeCategory(), new User(), new ArrayList<>());

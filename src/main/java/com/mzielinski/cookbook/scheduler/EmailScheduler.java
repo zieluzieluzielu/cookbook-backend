@@ -23,7 +23,7 @@ public class EmailScheduler {
 
     private static final String SUBJECT = "Recipes: weekly status";
 
-    @Scheduled(cron = "0 10 * * * SUN")
+    @Scheduled(cron = "0 0 10 * * SUN")
     private void sendInformationEmail() {
         long size = recipeRepository.count();
         emailService.send(new Mail(adminConfig.getAdminMail(), SUBJECT,

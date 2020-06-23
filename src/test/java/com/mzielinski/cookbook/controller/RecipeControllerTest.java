@@ -198,6 +198,50 @@ public class RecipeControllerTest {
     }
 
 
+
+
+    @Test
+    public void shouldRetrieveRecipeListByUser() throws Exception {
+        //Given
+        List<RecipeDto> recipesListDto = new ArrayList<>();
+
+        RecipeDto recipeDto1 = RecipeDto.builder()
+                .recipeId(1L)
+                .recipeName("Chicken Burger")
+                .recipeDetails("Test recipe details")
+                .preparationTime(30L)
+                .recipeCategoryId(1L)
+                .userId(1L).build();
+        RecipeDto recipeDto2 = RecipeDto.builder()
+                .recipeId(2L)
+                .recipeName("Chicken with cheese")
+                .recipeDetails("Test recipe details2")
+                .preparationTime(20L)
+                .recipeCategoryId(1L)
+                .userId(1L).build();
+
+        recipesListDto.add(recipeDto1);
+        recipesListDto.add(recipeDto2);
+
+        when(recipeMapper.mapToRecipesDtoList(recipeService.getRecipesByUser(1L))).thenReturn(recipesListDto);
+
+        //When & Then
+        mockMvc.perform(get("/v1/recipes/user/1").contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$", hasSize(2)))
+                .andExpect(jsonPath("$[0].recipeId", is(recipesListDto.get(0).getRecipeId().intValue())))
+                .andExpect(jsonPath("$[1].recipeName", is("Chicken with cheese")))
+                .andExpect(jsonPath("$[0].recipeName", is("Chicken Burger")))
+                .andExpect(jsonPath("$[0].recipeDetails", is("Test recipe details")))
+                .andExpect(jsonPath("$[0].preparationTime", is(30)))
+                .andExpect(jsonPath("$[1].recipeCategoryId", is(1)))
+                .andExpect(jsonPath("$[0].userId", is(1)));
+    }
+
+
+
+
+
     @Test
     public void shouldRetrieveRecipe() throws Exception {
         //Given

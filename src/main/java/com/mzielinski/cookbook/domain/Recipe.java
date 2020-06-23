@@ -32,6 +32,13 @@ import java.util.List;
 )
 
 @NamedNativeQuery(
+        name = "Recipe.retrieveRecipesByUser",
+        query ="SELECT * FROM RECIPES "
+                +"WHERE USER_ID = :USER_ID",
+        resultClass = Recipe.class
+)
+
+@NamedNativeQuery(
         name = "Recipe.randomRecipe",
         query ="SELECT * FROM RECIPES "
         +"ORDER BY RAND() "

@@ -17,6 +17,7 @@ public class RecipeCategoryMapper {
 
     public RecipeCategoryDto mapToRecipeCategoryDto(final RecipeCategory recipeCategory) {
         return new RecipeCategoryDto(
+                recipeCategory.getRecipeCategoryId(),
                 recipeCategory.getRecipeCategoryName());
     }
 

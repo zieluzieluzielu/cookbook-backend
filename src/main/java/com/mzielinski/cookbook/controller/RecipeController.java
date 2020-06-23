@@ -52,6 +52,12 @@ public class RecipeController {
         return recipeMapper.mapToRecipesDtoList(recipeService.getRecipesByProduct(productId));
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "recipes/user/{userId}")
+    public List<RecipeDto> getRecipesByUser(@PathVariable Long userId) {
+        return recipeMapper.mapToRecipesDtoList(recipeService.getRecipesByUser(userId));
+    }
+
+
     /*@RequestMapping(method = RequestMethod.GET, value = "/recipes/")
     public RecipeDto getRandomRecipe() {
         return recipeMapper.mapToRecipeDto(recipeService.getRandomRecipe().orElseThrow(() -> new RecipeNotFoundException("Random recipe was not found")));

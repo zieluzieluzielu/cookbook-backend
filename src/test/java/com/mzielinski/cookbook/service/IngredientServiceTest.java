@@ -107,4 +107,19 @@ public class IngredientServiceTest {
         assertFalse(ingredientRepository.findById(ingredient1.getIngredientPortionId()).isPresent());
 
     }
+
+    @Test
+    public void  ingredientToAnalyzeTest(){
+        //Given
+        Ingredient ingredient = new Ingredient(1L, new BigDecimal(100), "g", new Product(1L, "Chicken breast", new ProductGroup(6L, "Meat", new ArrayList<>()), new ArrayList<>()), new Recipe(), false);
+        //When
+        String ingredientToAnalyze = ingredient.getAmount() + " " + ingredient.getUnit() + " " + ingredient.getProduct().getProductName();
+
+        System.out.println(ingredientToAnalyze);
+
+
+        //Then
+
+        assertEquals(ingredientToAnalyze, "100 g Chicken breast");
+    }
 }

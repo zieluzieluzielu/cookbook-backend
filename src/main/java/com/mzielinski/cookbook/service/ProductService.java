@@ -21,6 +21,8 @@ public class ProductService {
     }
 
 
+//getProductsByRecipe
+
     public Product saveProduct(final Product product) {
         return productRepository.save(product);
     }
@@ -35,6 +37,10 @@ public class ProductService {
 
     public List<Product> getProductsByProductGroup(Long productGroupId) {
         return productRepository.retrieveProductByProductGroup(productGroupId);
+    }
+
+    public List<Product> getProductsByRecipe(Long recipeId) {
+        return productRepository.retrieveProductsByRecipe(recipeId);
     }
 
     public Optional<Product> getMainProductFromRecipe(final Long recipeId) {

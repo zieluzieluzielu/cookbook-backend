@@ -107,6 +107,24 @@ public class RecipeServiceTest {
 
     }
 
+    @Test
+    public void getRecipesByUser() {
+        //Given
+        List<Recipe> recipeList = new ArrayList<>();
+        Recipe tikkaMasala = new Recipe(1L, "Tikka Masala", "Test details of recipe 1", 10L, new RecipeCategory(), new User(), new ArrayList<>());
+        recipeList.add(tikkaMasala);
+
+        when(recipeRepository.retrieveRecipesByUser(66L)).thenReturn(recipeList);
+
+        //When
+        List<Recipe> recipesByProductList = recipeService.getRecipesByUser(66L);
+
+        //Then
+        assertEquals(1, recipesByProductList.size());
+
+    }
+
+
 
     @Test
     public void getRecipe() {

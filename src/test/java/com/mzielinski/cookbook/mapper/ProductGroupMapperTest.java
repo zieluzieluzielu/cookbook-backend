@@ -22,7 +22,6 @@ public class ProductGroupMapperTest {
         //Given
         ProductGroupDto productGroupDto = new ProductGroupDto(1L, "Vegetables");
 
-
         //When
         ProductGroup productGroup = productGroupMapper.mapToProductGroup(productGroupDto);
 

@@ -23,7 +23,7 @@ public class ProductMapper {
     }
 
     public ProductDto mapToProductDto(final Product product) {
-        return new ProductDto(product.getProductName(), product.getProductGroup().getProductGroupId());
+        return new ProductDto(product.getProductId(),product.getProductName(), product.getProductGroup().getProductGroupId());
     }
 
     public List<ProductDto> mapToProductsDtoList(final List<Product> productsList) {

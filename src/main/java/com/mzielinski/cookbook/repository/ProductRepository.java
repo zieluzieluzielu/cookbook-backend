@@ -27,6 +27,9 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query(nativeQuery = true)
     Optional<Product> retrieveMainProductFromRecipe(@Param("RECIPE_ID") long recipeId);
 
+    @Query(nativeQuery = true)
+    List<Product> retrieveProductsByRecipe(@Param("RECIPE_ID") long recipeId);
+
 
 
 

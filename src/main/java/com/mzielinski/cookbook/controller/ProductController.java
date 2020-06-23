@@ -42,6 +42,12 @@ public class ProductController {
 
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/products/recipe/list/{recipeId}")
+    public List<ProductDto> getProductsByRecipe(@PathVariable Long recipeId) {
+        return productMapper.mapToProductsDtoList(productService.getProductsByRecipe(recipeId));
+
+    }
+
     @RequestMapping(method = RequestMethod.POST, value = "/products", consumes = APPLICATION_JSON_VALUE)
     public ProductDto createProduct(@RequestBody ProductDto productDto) throws ProductGroupNotFoundException {
         LOGGER.info("Creating new Product");

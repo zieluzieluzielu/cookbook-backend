@@ -28,6 +28,17 @@ import java.util.List;
         resultClass = Product.class
 )
 
+@NamedNativeQuery(
+        name = "Product.retrieveProductsByRecipe",
+        query ="SELECT P.* FROM COOKBOOK.PRODUCTS P" +
+                " JOIN COOKBOOK.INGREDIENTS I" +
+                " ON P.PRODUCT_ID = I.PRODUCT_ID" +
+                " JOIN COOKBOOK.RECIPES R" +
+                " ON I.RECIPE_ID=R.RECIPE_ID" +
+                " WHERE R.RECIPE_ID= :RECIPE_ID",
+        resultClass = Product.class
+)
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
