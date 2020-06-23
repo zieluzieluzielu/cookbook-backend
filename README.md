@@ -52,7 +52,7 @@ Front-end address: http://localhost:8081/
 
 database details (mysql)
 url: jdbc:mysql://localhost:3306/cookbook?serverTimezone=Europe/Warsaw&useSSL=false&allowPublicKeyRetrieval=true
-datbase username (password): mzielinski
+datbase username / password: mzielinski
 
 ## FRONT-END
 
