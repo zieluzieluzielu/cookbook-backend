@@ -35,7 +35,7 @@ Project was built on Java 8, is using Gradle and Spring Boot (2.3.0).
 - Spring Web
 - Hibernate
 - Spring Boot 2.3.0
-- Vaadin for front-end
+- Vaadin 14.2.1 for front-end
 
 Project is using Lombok library and named queries (HQL language).
 
@@ -57,7 +57,7 @@ datbase username / password: mzielinski
 
 ## FRONT-END
 
-This project has a back-end instance. Front-end address: http://localhost:8081/
+This project has a front-end instance. Front-end address: http://localhost:8081/
 
 https://github.com/zieluzieluzielu/cookbook-frontend
 
