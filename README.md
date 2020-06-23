@@ -6,7 +6,9 @@
 
 ## PROJECT DESCRIPTION
 
-CookBook application was created to help in gathering recipes in one place (app), with additional features.
+CookBook application was created to help in gathering recipes in one place (app), with matching specific wine (type and product with price) to the dish (based on products) and is counting nutrition values (kcal, carbohydrates, protein and fat) of each ingredient.
+
+Project is connected to two external API's: Spoonacular and Edamam.
 
 **MAIN FEATURES:**
 
@@ -14,7 +16,13 @@ CookBook application was created to help in gathering recipes in one place (app)
 - filtering the recipes by i.a. product, recipe category, preparation time
 - wine selector api -> founding the best fitting wine to recipe based on main ingredients
 - nutrition values api -> summing all nutrition values (kcal, carbo, protein, fat) by taking quantity of each ingredient of recipe.
-- possibility to add recipes
+- adding recipes, products and ingredients
+
+**ADDING RECIPE:**
+
+1. First create a recipe
+2. Then add an ingredients to recipe. If the products are not available in the list - add them.
+3. After successfully added recipe with products, you can find the recipe in the list, see the suggested wines and calculated nutrition values.
 
 
 **API free calls limits:**
@@ -32,6 +40,7 @@ Project korzystający z Gradle i Spring Boot (2.3.0). Java 8
 - zapytania namedquery korzystające z języka HQL
 
 do projketu zostala zbudowana lokalnie baza danych.
+
 
 
 ## HOW TO RUN
