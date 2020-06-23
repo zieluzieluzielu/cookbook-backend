@@ -18,24 +18,25 @@ CookBook application was created to help in gathering recipes in one place (app)
 
 
 **API free calls limits:**
-- EDAMAM:  5000/MONTH
-- SPOONACULAR: 150/DAY
+- Edamam:  5000/month
+- Spoonacular: 150/day
 
 ## TECHNOLOGIES USED
 
 Project korzystający z Gradle i Spring Boot (2.3.0). Java 8
--lombok
--springweb
--gradle
--springboot 2.3.0
+- lombok
+- springweb
+- gradle
+- springboot 2.3.0
+- Vaadin for front-end
 - zapytania namedquery korzystające z języka HQL
 
 do projketu zostala zbudowana lokalnie baza danych.
 
 
-
 ## DEMO APP
 
+To be published soon.
 
 ## HOW TO RUN
 
