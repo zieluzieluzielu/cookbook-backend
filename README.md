@@ -32,12 +32,12 @@ Project is connected to two external API's: Spoonacular and Edamam.
 
 Project was built on Java 8, is using Gradle and Spring Boot (2.3.0).
 
-- lombok
-- springweb
-- gradle
-- springboot 2.3.0
+- Spring Web
+- Hibernate
+- Spring Boot 2.3.0
 - Vaadin for front-end
-- named queries (HQL language)
+
+Project is using Lombok library and named queries (HQL language).
 
 Project is connected to locally built database (MYSQL)
 
