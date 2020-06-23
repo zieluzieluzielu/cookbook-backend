@@ -1,4 +1,4 @@
-# myCookBook - Backend application
+# CookBook - Backend application
 ![CookBook logo](https://i.imgur.com/Cd5H84o.png)
 
 
