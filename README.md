@@ -56,7 +56,7 @@ This project has a back-end instance. Front-end address: http://localhost:8081/
 https://github.com/zieluzieluzielu/cookbook-frontend
 
 ## TO BE DEVELOPED
-
+- improving the form of adding recipes (more friendly UI)
 - layout adaptations
 - fixing minor bugs
 - user registration  / login (with WebSecurityConfigurerAdapter) + adding specific roles 
