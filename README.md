@@ -34,10 +34,6 @@ Project korzystający z Gradle i Spring Boot (2.3.0). Java 8
 do projketu zostala zbudowana lokalnie baza danych.
 
 
-## DEMO APP
-
-To be published soon.
-
 ## HOW TO RUN
 
 To have the full functionality - please import the dump of the database (MYSQL).
@@ -53,6 +49,12 @@ url: jdbc:mysql://localhost:3306/cookbook?serverTimezone=Europe/Warsaw&useSSL=fa
 username / password: mzielinski
 
 
+## FRONT-END
+
+This project has a back-end instance. Front-end address: http://localhost:8081/
+
+https://github.com/zieluzieluzielu/cookbook-frontend
+
 ## TO BE DEVELOPED
 
 - layout adaptations
@@ -67,10 +69,6 @@ username / password: mzielinski
 - add kcal per person
 - infomracja o ilosciach osob : FOR 2 PEOPLE / FOR 4 PEOPLE
 
+## DEMO APP
 
-## FRONT-END
-
-This project has a back-end instance. Front-end address: http://localhost:8081/
-
-https://github.com/zieluzieluzielu/cookbook-frontend
-
+To be published soon.
