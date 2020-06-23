@@ -31,16 +31,16 @@ Project is connected to two external API's: Spoonacular and Edamam.
 
 ## TECHNOLOGIES USED
 
-Project korzystający z Gradle i Spring Boot (2.3.0). Java 8
+Project was built on Java 8, is using Gradle and Spring Boot (2.3.0).
+
 - lombok
 - springweb
 - gradle
 - springboot 2.3.0
 - Vaadin for front-end
-- zapytania namedquery korzystające z języka HQL
+- named queries (HQL language)
 
-do projketu zostala zbudowana lokalnie baza danych.
-
+Project is connected to locally built database (MYSQL)
 
 
 ## HOW TO RUN
@@ -64,19 +64,18 @@ This project has a back-end instance. Front-end address: http://localhost:8081/
 
 https://github.com/zieluzieluzielu/cookbook-frontend
 
-## TO BE DEVELOPED
+## TO BE DEVELOPED SOON
+
+- postgresql connection (Heroku)
 - improving the form of adding recipes (more friendly UI)
 - layout adaptations
-- fixing minor bugs
-- user registration  / login (with WebSecurityConfigurerAdapter) + adding specific roles 
-- postgresql connection
+- user registration  / login (using WebSecurityConfigurerAdapter), adding specific roles
 - deleting of objects
 - poszerzenie bazy danych o informacje o logowaniach, data dodania przepisu
-- tagi do dania?
-- postgresql
-- scheduler do przepisow sciaga kalorycznosc i zapisuje do bazy.
-- add kcal per person
-- infomracja o ilosciach osob : FOR 2 PEOPLE / FOR 4 PEOPLE
+- adding tags to recipes
+- adding information about number of people for which dish is made. 
+- information about nutrition values per person.
+- fixing minor bugs
 
 ## DEMO APP
 
