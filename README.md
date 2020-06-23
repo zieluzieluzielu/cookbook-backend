@@ -64,7 +64,7 @@ https://github.com/zieluzieluzielu/cookbook-frontend
 
 ## TO BE DEVELOPED SOON
 
-- postgresql connection (Heroku)
+- PostgreSQL connection (Heroku)
 - improving the form of adding recipes (more friendly UI)
 - layout adaptations
 - user registration  / login (using WebSecurityConfigurerAdapter), adding specific roles
