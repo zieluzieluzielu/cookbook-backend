@@ -18,12 +18,11 @@ Project is connected to two external API's: Spoonacular and Edamam.
 - nutrition values api -> summing all nutrition values (kcal, carbo, protein, fat) by taking quantity of each ingredient of recipe.
 - adding recipes, products and ingredients
 
-**ADDING RECIPE:**
+**ADDING A RECIPE:**
 
 1. First create a recipe
 2. Then add an ingredients to recipe. If the products are not available in the list - add them.
 3. After successfully added recipe with products, you can find the recipe in the list, see the suggested wines and calculated nutrition values.
-
 
 **API free calls limits:**
 - Edamam:  5000/month
@@ -56,7 +55,6 @@ Front-end address: http://localhost:8081/
 database details (mysql)
 url: jdbc:mysql://localhost:3306/cookbook?serverTimezone=Europe/Warsaw&useSSL=false&allowPublicKeyRetrieval=true
 username / password: mzielinski
-
 
 ## FRONT-END
 
