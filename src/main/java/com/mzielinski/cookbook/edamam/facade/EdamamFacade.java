@@ -7,7 +7,6 @@ import com.mzielinski.cookbook.edamam.validator.EdamamValidator;
 import com.mzielinski.cookbook.exception.IngredientNotFoundException;
 import com.mzielinski.cookbook.mapper.EdamamMapper;
 import com.mzielinski.cookbook.service.EdamamService;
-import com.mzielinski.cookbook.service.IngredientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,9 +25,6 @@ public class EdamamFacade {
 
     @Autowired
     private EdamamValidator edamamValidator;
-
-    @Autowired
-    private IngredientService ingredientService;
 
     public EdamamDto getNutrition(Ingredient ingredient) throws IngredientNotFoundException {
 
